@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:layout_weight="1.0">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/createAccount_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:contextClickable="true"
+    android:focusableInTouchMode="true">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/back_floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:contentDescription="@string/backButton"
+        android:focusable="true"
+        app:backgroundTint="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24"
+        app:tint="@null"
+        tools:ignore="RedundantDescriptionCheck" />
+
+    <TextView
+        android:id="@+id/title_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/museo_sans_300"
+        android:text="@string/create_account"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider_view"
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/material_dynamic_secondary70"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_textView" />
+
+    <TextView
+        android:id="@+id/emailAddress_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/museo_sans_300"
+        android:text="@string/email_address"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider_view"
+        app:layout_constraintBottom_toTopOf="@+id/email_editTextEmailAddress"/>
+
+    <EditText
+        android:id="@+id/email_editTextEmailAddress"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/emailWarningMsg_textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailAddress_textView"
+        android:background="@color/white"
+        android:drawablePadding="20dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/password_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/museo_sans_300"
+        android:text="@string/create_password"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailWarningMsg_textView"
+        app:layout_constraintBottom_toTopOf="@+id/password_editTextPassword"/>
+
+    <EditText
+        android:id="@+id/password_editTextPassword"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:hint="@string/see_criteria"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_textView"
+        app:layout_constraintBottom_toTopOf="@+id/repeatPassword_textView"
+        android:background="@color/white"/>
+
+    <EditText
+        android:id="@+id/repeatPassword_editTextPassword"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/passwordWarningMsg_textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repeatPassword_textView"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:background="@color/white"/>
+
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="26dp"
+        android:background="@drawable/gradient_button_background"
+        android:fontFamily="@font/museo_sans_300"
+        android:text="@string/next"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textAllCaps="false"
+        app:backgroundTint="@null"
+        app:tint="@null"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:alpha=".4"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/criteria_textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/repeatPassword_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/museo_sans_300"
+        android:text="@string/repeat_password"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.183"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_editTextPassword"
+        app:layout_constraintBottom_toTopOf="@+id/repeatPassword_editTextPassword"/>
+
+    <TextView
+        android:id="@+id/criteria_textView"
+        android:layout_width="330dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/museo_sans_300"
+        android:text="@string/criteria"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/next_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordWarningMsg_textView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/emailWarningMsg_textView"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/museo_sans_300"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:visibility="gone"
+        android:background="@drawable/tv_red_shape"
+        android:drawablePadding="10dp"
+        android:padding="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_editTextEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/password_textView"
+        app:drawableLeftCompat="@drawable/cross" />
+
+    <TextView
+        android:id="@+id/passwordWarningMsg_textView"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/museo_sans_300"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:visibility="gone"
+        android:background="@drawable/tv_red_shape"
+        android:drawablePadding="10dp"
+        android:padding="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repeatPassword_editTextPassword"
+        app:layout_constraintBottom_toTopOf="@+id/criteria_textView"
+        app:drawableLeftCompat="@drawable/cross" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Exercise1</string>
+    <string name="title_text_1">GreenFlag customers can create an account to access</string>
+    <string name="logo">LOGO</string>
+    <string name="service_1">Car health updates</string>
+    <string name="service_2">Request a rescue online</string>
+    <string name="check_mark">TODO</string>
+    <string name="service_3">Policy information</string>
+    <string name="create_account">Create an account</string>
+    <string name="backButton">back button</string>
+    <string name="email_address">Email address</string>
+    <string name="repeat_password">Repeat password</string>
+    <string name="create_password">Create password</string>
+    <string name="next">Next</string>
+    <string name="see_criteria">See criteria below</string>
+    <string name="criteria">Your password should have a minimum of 8 characters and contain at least one number, one uppercase and lower case letter. You can use special characters.</string>
+    <string name="email_exist_warning">An account already exist for this email address</string>
+    <string name="email_format_warning">Incorrect email format</string>
+    <string name="password_format_warning">Your password doesn\'t match the criteria</string>
+    <string name="passwords_matching_warning">Your passwords don\'t match</string>
+</resources>
